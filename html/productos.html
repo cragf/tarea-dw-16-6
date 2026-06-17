@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos TechStore Online - Laptops, smartphones, accesorios y más.">
+  <meta name="author" content="TechStore Online">
+  <title>Productos — TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header>
+    <div id="barra-superior">
+      <p>🚚 Envío gratis en compras mayores a $50.000</p>
+      <nav aria-label="Navegación secundaria">
+        <ul>
+          <li><a href="contacto.html">Ayuda</a></li>
+          <li><a href="#">Seguimiento de pedidos</a></li>
+          <li><a href="#">Mi cuenta</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="barra-principal">
+      <a href="index.html" id="logo" aria-label="TechStore - Ir al inicio">
+        <span>🖥️</span>
+        <strong>TechStore</strong>
+      </a>
+
+      <form action="#" method="get" role="search" aria-label="Búsqueda de productos">
+        <label for="busqueda" class="sr-only">Buscar productos</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar productos..." autocomplete="on" aria-label="Buscar productos">
+        <button type="submit" aria-label="Buscar">🔍 Buscar</button>
+      </form>
+
+      <div id="acciones-usuario">
+        <a href="#" aria-label="Favoritos (0)">❤️ Favoritos <span>0</span></a>
+        <a href="carrito.html" aria-label="Carrito de compras (0 productos)">🛒 Carrito <span>0</span></a>
+      </div>
+    </div>
+
+    <nav id="menu-principal" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="productos.html?oferta=true">Ofertas</a></li>
+        <li><a href="productos.html?nuevo=true">Novedades</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li>Productos</li>
+      </ol>
+    </nav>
+
+    <h1>Catálogo de Productos</h1>
+
+    <div id="contenedor-productos">
+
+      <!-- ===== SIDEBAR DE FILTROS ===== -->
+      <aside aria-label="Filtros de búsqueda">
+        <h2>Filtros</h2>
+
+        <form action="#" method="get" aria-label="Formulario de filtros">
+
+          <!-- Filtro por categoría -->
+          <fieldset>
+            <legend>Categoría</legend>
+            <label><input type="checkbox" name="categoria" value="celulares"> Celulares</label>
+            <label><input type="checkbox" name="categoria" value="laptops"> Laptops</label>
+            <label><input type="checkbox" name="categoria" value="audio"> Audio</label>
+            <label><input type="checkbox" name="categoria" value="accesorios"> Accesorios</label>
+            <label><input type="checkbox" name="categoria" value="gaming"> Gaming</label>
+            <label><input type="checkbox" name="categoria" value="hogar"> Hogar Inteligente</label>
+          </fieldset>
+
+          <!-- Filtro por precio -->
+          <fieldset>
+            <legend>Precio</legend>
+            <label><input type="radio" name="precio" value="0-50000"> Hasta $50.000</label>
+            <label><input type="radio" name="precio" value="50000-150000"> $50.000 – $150.000</label>
+            <label><input type="radio" name="precio" value="150000-400000"> $150.000 – $400.000</label>
+            <label><input type="radio" name="precio" value="400000+"> Más de $400.000</label>
+          </fieldset>
+
+          <!-- Filtro por marca -->
+          <fieldset>
+            <legend>Marca</legend>
+            <label for="marca">Seleccionar marca:</label>
+            <select id="marca" name="marca">
+              <option value="">Todas las marcas</option>
+              <optgroup label="Smartphones">
+                <option value="samsung">Samsung</option>
+                <option value="apple">Apple</option>
+                <option value="xiaomi">Xiaomi</option>
+              </optgroup>
+              <optgroup label="Computadoras">
+                <option value="lenovo">Lenovo</option>
+                <option value="hp">HP</option>
+                <option value="asus">Asus</option>
+                <option value="dell">Dell</option>
+              </optgroup>
+              <optgroup label="Audio">
+                <option value="sony">Sony</option>
+                <option value="jbl">JBL</option>
+                <option value="bose">Bose</option>
+              </optgroup>
+              <optgroup label="Gaming">
+                <option value="logitech">Logitech</option>
+                <option value="razer">Razer</option>
+                <option value="microsoft">Microsoft</option>
+              </optgroup>
+            </select>
+          </fieldset>
+
+          <!-- Filtro por color -->
+          <fieldset>
+            <legend>Color</legend>
+            <label><input type="checkbox" name="color" value="negro"> Negro</label>
+            <label><input type="checkbox" name="color" value="blanco"> Blanco</label>
+            <label><input type="checkbox" name="color" value="gris"> Gris</label>
+            <label><input type="checkbox" name="color" value="azul"> Azul</label>
+            <label><input type="checkbox" name="color" value="plata"> Plata</label>
+          </fieldset>
+
+          <!-- Filtro por disponibilidad -->
+          <fieldset>
+            <legend>Disponibilidad</legend>
+            <label><input type="checkbox" name="disponibilidad" value="en-stock"> En stock</label>
+            <label><input type="checkbox" name="disponibilidad" value="oferta"> En oferta</label>
+            <label><input type="checkbox" name="disponibilidad" value="nuevo"> Nuevo</label>
+          </fieldset>
+
+          <!-- Filtro por valoración -->
+          <fieldset>
+            <legend>Valoración mínima</legend>
+            <label><input type="radio" name="valoracion" value="4"> ⭐⭐⭐⭐ y más</label>
+            <label><input type="radio" name="valoracion" value="3"> ⭐⭐⭐ y más</label>
+            <label><input type="radio" name="valoracion" value="todos" checked> Todas</label>
+          </fieldset>
+
+          <!-- Datalist para búsqueda con sugerencias -->
+          <fieldset>
+            <legend>Buscar por nombre</legend>
+            <label for="buscar-producto">Nombre del producto:</label>
+            <input type="text" id="buscar-producto" name="buscar" list="sugerencias-productos" placeholder="Ej: Laptop, Samsung...">
+            <datalist id="sugerencias-productos">
+              <option value="Laptop Lenovo IdeaPad">
+              <option value="Samsung Galaxy A54">
+              <option value="Auriculares Sony">
+              <option value="iPad Apple">
+              <option value="Control Xbox">
+              <option value="Echo Dot Amazon">
+              <option value="Teclado Logitech">
+              <option value="Xiaomi Watch">
+            </datalist>
+          </fieldset>
+
+          <button type="submit">Aplicar filtros</button>
+          <button type="reset">Limpiar filtros</button>
+
+        </form>
+      </aside>
+
+      <!-- ===== LISTADO DE PRODUCTOS ===== -->
+      <section id="todas" aria-labelledby="titulo-catalogo">
+        <div id="barra-ordenamiento">
+          <h2 id="titulo-catalogo">Todos los productos <small>(16 resultados)</small></h2>
+          <label for="ordenar">Ordenar por:</label>
+          <select id="ordenar" name="ordenar">
+            <option value="relevancia">Relevancia</option>
+            <option value="precio-asc">Precio: menor a mayor</option>
+            <option value="precio-desc">Precio: mayor a menor</option>
+            <option value="valoracion">Mejor valorados</option>
+            <option value="nuevo">Más nuevos</option>
+          </select>
+        </div>
+
+        <div id="grilla-productos">
+
+          <!-- Producto 1 -->
+          <article class="producto" aria-label="Samsung Galaxy A54 5G">
+            <header>
+              <figure>
+                <img src="img/producto-galaxy-a54.jpg" alt="Samsung Galaxy A54 5G en color negro" width="200" height="200">
+              </figure>
+              <span class="etiqueta-oferta">17% OFF</span>
+            </header>
+            <h3><a href="producto.html">Smartphone Galaxy A54 5G</a></h3>
+            <p>Pantalla AMOLED 6.4&quot;, 128GB, cámara triple 50MP.</p>
+            <p>⭐⭐⭐⭐☆ <small>(128)</small></p>
+            <p><del>$599.990</del> <strong>$499.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Samsung Galaxy A54 al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 2 -->
+          <article class="producto" aria-label="Laptop Lenovo IdeaPad 3">
+            <header>
+              <figure>
+                <img src="img/producto-lenovo-ideapad.jpg" alt="Laptop Lenovo IdeaPad 3 plateada" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">Laptop Lenovo IdeaPad 3</a></h3>
+            <p>Intel Core i5, 8GB RAM, SSD 512GB, 15.6&quot;.</p>
+            <p>⭐⭐⭐⭐☆ <small>(86)</small></p>
+            <p><strong>$699.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Lenovo IdeaPad al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 3 -->
+          <article class="producto" aria-label="Auriculares Sony WH-CH720N">
+            <header>
+              <figure>
+                <img src="img/producto-sony-wh720n.jpg" alt="Auriculares Sony WH-CH720N blancos" width="200" height="200">
+              </figure>
+              <span class="etiqueta-oferta">20% OFF</span>
+            </header>
+            <h3><a href="producto.html">Auriculares Sony WH-CH720N</a></h3>
+            <p>Cancelación de ruido activa, Bluetooth 5.2, 35h de batería.</p>
+            <p>⭐⭐⭐⭐☆ <small>(73)</small></p>
+            <p><del>$249.990</del> <strong>$199.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Sony WH-CH720N al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 4 -->
+          <article class="producto" aria-label="Smartwatch Xiaomi Watch 2">
+            <header>
+              <figure>
+                <img src="img/producto-xiaomi-watch2.jpg" alt="Smartwatch Xiaomi Watch 2 con correa negra" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">Smartwatch Xiaomi Watch 2</a></h3>
+            <p>GPS integrado, monitor cardíaco, 150+ modos deportivos.</p>
+            <p>⭐⭐⭐⭐☆ <small>(40)</small></p>
+            <p><strong>$159.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Xiaomi Watch 2 al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 5 -->
+          <article class="producto" aria-label="Control Xbox Series X|S">
+            <header>
+              <figure>
+                <img src="img/producto-control-xbox.jpg" alt="Control inalámbrico Xbox Series X negro" width="200" height="200">
+              </figure>
+              <span class="etiqueta-oferta">16% OFF</span>
+            </header>
+            <h3><a href="producto.html">Control Xbox Series X|S</a></h3>
+            <p>Inalámbrico, compatible con PC y Xbox, gatillos texturizados.</p>
+            <p>⭐⭐⭐☆☆ <small>(32)</small></p>
+            <p><del>$89.990</del> <strong>$74.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Control Xbox al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 6 -->
+          <article class="producto" aria-label="Echo Dot 5ta Generación">
+            <header>
+              <figure>
+                <img src="img/producto-echo-dot5.jpg" alt="Amazon Echo Dot 5ta generación gris" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">Echo Dot (5ta Gen)</a></h3>
+            <p>Altavoz inteligente con Alexa, sonido mejorado, Zigbee.</p>
+            <p>⭐⭐⭐⭐⭐ <small>(172)</small></p>
+            <p><strong>$49.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Echo Dot al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 7 -->
+          <article class="producto" aria-label="iPad 10ma Generación">
+            <header>
+              <figure>
+                <img src="img/producto-ipad-10.jpg" alt="Apple iPad 10ma generación color azul" width="200" height="200">
+              </figure>
+              <span class="etiqueta-nuevo">NUEVO</span>
+            </header>
+            <h3><a href="producto.html">iPad 10ma Generación</a></h3>
+            <p>Chip A14 Bionic, pantalla 10.9&quot;, Wi-Fi + 5G, 64GB.</p>
+            <p>⭐⭐⭐⭐⭐ <small>(210)</small></p>
+            <p><strong>$449.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar iPad al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 8 -->
+          <article class="producto" aria-label="Teclado Mecánico Logitech G413">
+            <header>
+              <figure>
+                <img src="img/producto-logitech-g413.jpg" alt="Teclado mecánico Logitech G413 con retroiluminación roja" width="200" height="200">
+              </figure>
+              <span class="etiqueta-oferta">18% OFF</span>
+            </header>
+            <h3><a href="producto.html">Teclado Mecánico Logitech G413</a></h3>
+            <p>Switches Romer-G, retroiluminación LED, aluminio.</p>
+            <p>⭐⭐⭐⭐☆ <small>(55)</small></p>
+            <p><del>$109.990</del> <strong>$89.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Teclado Logitech al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 9 -->
+          <article class="producto" aria-label="Mouse Razer DeathAdder V3">
+            <header>
+              <figure>
+                <img src="img/producto-razer-deathadder.jpg" alt="Mouse gaming Razer DeathAdder V3 negro" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">Mouse Razer DeathAdder V3</a></h3>
+            <p>59g ultraligero, sensor Focus Pro 30K, 90 horas de batería.</p>
+            <p>⭐⭐⭐⭐⭐ <small>(98)</small></p>
+            <p><strong>$119.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Mouse Razer al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 10 -->
+          <article class="producto" aria-label="Monitor LG 27 pulgadas 4K">
+            <header>
+              <figure>
+                <img src="img/producto-lg-monitor4k.jpg" alt="Monitor LG 27 pulgadas 4K UHD negro" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">Monitor LG 27&quot; 4K UHD</a></h3>
+            <p>Panel IPS, HDR10, 60Hz, USB-C, ajuste de altura.</p>
+            <p>⭐⭐⭐⭐☆ <small>(61)</small></p>
+            <p><strong>$379.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Monitor LG al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 11 -->
+          <article class="producto" aria-label="Cámara Web Logitech C920">
+            <header>
+              <figure>
+                <img src="img/producto-logitech-c920.jpg" alt="Cámara web Logitech C920 HD Pro negra" width="200" height="200">
+              </figure>
+              <span class="etiqueta-oferta">10% OFF</span>
+            </header>
+            <h3><a href="producto.html">Cámara Web Logitech C920</a></h3>
+            <p>Full HD 1080p, autofocus, micrófono estéreo integrado.</p>
+            <p>⭐⭐⭐⭐☆ <small>(44)</small></p>
+            <p><del>$79.990</del> <strong>$71.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Cámara Logitech al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 12 -->
+          <article class="producto" aria-label="SSD Samsung 870 EVO 1TB">
+            <header>
+              <figure>
+                <img src="img/producto-ssd-samsung.jpg" alt="SSD Samsung 870 EVO 1TB" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">SSD Samsung 870 EVO 1TB</a></h3>
+            <p>SATA III, velocidad lectura 560MB/s, garantía 5 años.</p>
+            <p>⭐⭐⭐⭐⭐ <small>(189)</small></p>
+            <p><strong>$69.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar SSD Samsung al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 13 -->
+          <article class="producto" aria-label="Impresora HP DeskJet 2775">
+            <header>
+              <figure>
+                <img src="img/producto-hp-deskjet.jpg" alt="Impresora HP DeskJet 2775 color blanca" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">Impresora HP DeskJet 2775</a></h3>
+            <p>Inyección de tinta, Wi-Fi, impresión a doble cara, color.</p>
+            <p>⭐⭐⭐☆☆ <small>(27)</small></p>
+            <p><strong>$89.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Impresora HP al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 14 -->
+          <article class="producto" aria-label="Bocina JBL Flip 6">
+            <header>
+              <figure>
+                <img src="img/producto-jbl-flip6.jpg" alt="Bocina portátil JBL Flip 6 en color azul" width="200" height="200">
+              </figure>
+              <span class="etiqueta-oferta">15% OFF</span>
+            </header>
+            <h3><a href="producto.html">Bocina JBL Flip 6</a></h3>
+            <p>Bluetooth 5.1, resistente al agua IP67, 12h de batería.</p>
+            <p>⭐⭐⭐⭐⭐ <small>(134)</small></p>
+            <p><del>$99.990</del> <strong>$84.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar JBL Flip 6 al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 15 -->
+          <article class="producto" aria-label="Hub USB-C Anker 7 en 1">
+            <header>
+              <figure>
+                <img src="img/producto-anker-hub.jpg" alt="Hub USB-C Anker 7 en 1 plateado" width="200" height="200">
+              </figure>
+            </header>
+            <h3><a href="producto.html">Hub USB-C Anker 7 en 1</a></h3>
+            <p>HDMI 4K, 3x USB-A, lector SD, carga 100W PD.</p>
+            <p>⭐⭐⭐⭐☆ <small>(76)</small></p>
+            <p><strong>$39.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar Hub Anker al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+          <!-- Producto 16 -->
+          <article class="producto" aria-label="Laptop ASUS ROG Strix G15">
+            <header>
+              <figure>
+                <img src="img/producto-asus-rog.jpg" alt="Laptop gaming ASUS ROG Strix G15 negra con iluminación RGB" width="200" height="200">
+              </figure>
+              <span class="etiqueta-nuevo">NUEVO</span>
+            </header>
+            <h3><a href="producto.html">Laptop ASUS ROG Strix G15</a></h3>
+            <p>AMD Ryzen 9, RTX 4070, 16GB RAM, SSD 1TB, 165Hz.</p>
+            <p>⭐⭐⭐⭐⭐ <small>(47)</small></p>
+            <p><strong>$1.299.990</strong></p>
+            <footer>
+              <button type="button" aria-label="Agregar ASUS ROG al carrito">🛒 Agregar</button>
+              <button type="button" aria-label="Agregar a favoritos">❤️</button>
+            </footer>
+          </article>
+
+        </div><!-- fin #grilla-productos -->
+
+        <!-- Paginación -->
+        <nav aria-label="Paginación de productos">
+          <ol>
+            <li><a href="#" aria-label="Página anterior">‹ Anterior</a></li>
+            <li><a href="#" aria-current="page" aria-label="Página 1">1</a></li>
+            <li><a href="#" aria-label="Página 2">2</a></li>
+            <li><a href="#" aria-label="Página 3">3</a></li>
+            <li><a href="#" aria-label="Página siguiente">Siguiente ›</a></li>
+          </ol>
+        </nav>
+
+      </section><!-- fin #todas -->
+
+    </div><!-- fin #contenedor-productos -->
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <div id="footer-contenido">
+      <section aria-labelledby="footer-marca">
+        <h3 id="footer-marca">TechStore</h3>
+        <p>Tu tienda online de tecnología favorita.</p>
+      </section>
+      <section aria-labelledby="footer-info">
+        <h3 id="footer-info">Información</h3>
+        <ul>
+          <li><a href="acerca.html">Sobre nosotros</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="footer-ayuda">
+        <h3 id="footer-ayuda">Ayuda</h3>
+        <ul>
+          <li><a href="contacto.html">Centro de ayuda</a></li>
+          <li><a href="#">Métodos de pago</a></li>
+          <li><a href="#">Envíos y entregas</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="footer-cuenta">
+        <h3 id="footer-cuenta">Mi cuenta</h3>
+        <ul>
+          <li><a href="#">Iniciar sesión</a></li>
+          <li><a href="#">Mis pedidos</a></li>
+          <li><a href="#">Lista de deseos</a></li>
+          <li><a href="#">Mi perfil</a></li>
+        </ul>
+      </section>
+    </div>
+    <div id="footer-inferior">
+      <address>
+        TechStore Online S.A. — Av. Tecnología 1234, Santiago, Chile —
+        <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+      </address>
+      <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>

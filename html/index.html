@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechStore Online - Tu tienda de tecnología favorita. Laptops, smartphones, accesorios y más.">
+  <meta name="keywords" content="tecnología, laptops, smartphones, accesorios, gaming, tienda online">
+  <meta name="author" content="TechStore Online">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="TechStore Online">
+  <meta property="og:description" content="Tu tienda de tecnología favorita">
+  <meta property="og:type" content="website">
+  <title>TechStore Online - Tu Tienda de Tecnología</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <base href="">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header>
+    <!-- Barra superior -->
+    <div id="barra-superior">
+      <p>🚚 Envío gratis en compras mayores a $50.000</p>
+      <nav aria-label="Navegación secundaria">
+        <ul>
+          <li><a href="contacto.html">Ayuda</a></li>
+          <li><a href="#">Seguimiento de pedidos</a></li>
+          <li><a href="#">Mi cuenta</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Logo y búsqueda -->
+    <div id="barra-principal">
+      <a href="index.html" id="logo" aria-label="TechStore - Ir al inicio">
+        <span>🖥️</span>
+        <strong>TechStore</strong>
+      </a>
+
+      <form action="#" method="get" role="search" aria-label="Búsqueda de productos">
+        <label for="busqueda" class="sr-only">Buscar productos</label>
+        <input
+          type="search"
+          id="busqueda"
+          name="q"
+          placeholder="Buscar productos..."
+          autocomplete="on"
+          aria-label="Buscar productos"
+        >
+        <button type="submit" aria-label="Buscar">🔍 Buscar</button>
+      </form>
+
+      <div id="acciones-usuario">
+        <a href="#" aria-label="Favoritos (0)">❤️ Favoritos <span>0</span></a>
+        <a href="carrito.html" aria-label="Carrito de compras (0 productos)">🛒 Carrito <span>0</span></a>
+      </div>
+    </div>
+
+    <!-- Menú principal -->
+    <nav id="menu-principal" aria-label="Menú principal">
+      <button id="btn-categorias" aria-expanded="false" aria-controls="menu-categorias">
+        ☰ Categorías
+      </button>
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="productos.html?oferta=true">Ofertas</a></li>
+        <li><a href="productos.html?nuevo=true">Novedades</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- 1. BANNER PROMOCIONAL -->
+    <section id="banner-promocional" aria-label="Banner promocional">
+      <div id="banner-contenido">
+        <span class="etiqueta-nuevo">NUEVO</span>
+        <h1>Auriculares Inalámbricos<br><mark>SoundPro X1</mark></h1>
+        <p>Sonido premium, cancelación de ruido y hasta 30 horas de batería.</p>
+        <a href="producto.html" class="btn-primario">Comprar ahora</a>
+      </div>
+
+      <figure>
+        <picture>
+          <source srcset="img/banner-auriculares-desktop.jpg" media="(min-width: 768px)">
+          <img src="img/banner-auriculares-mobile.jpg" alt="Auriculares inalámbricos SoundPro X1 en color negro, vistos de frente" width="600" height="400">
+        </picture>
+        <figcaption>SoundPro X1 — El sonido que mereces</figcaption>
+      </figure>
+
+      <!-- Beneficios -->
+      <aside aria-label="Beneficios de compra">
+        <article>
+          <span>📦</span>
+          <h3>Envíos rápidos</h3>
+          <p>A todo el país</p>
+        </article>
+        <article>
+          <span>✅</span>
+          <h3>Garantía oficial</h3>
+          <p>Hasta 12 meses</p>
+        </article>
+        <article>
+          <span>💳</span>
+          <h3>Pagos seguros</h3>
+          <p>Tarjetas y más</p>
+        </article>
+        <article>
+          <span>🎧</span>
+          <h3>Atención al cliente</h3>
+          <p>Soporte 24/7</p>
+        </article>
+      </aside>
+    </section>
+
+    <!-- 2. CATEGORÍAS DESTACADAS -->
+    <section id="categorias" aria-labelledby="titulo-categorias">
+      <h2 id="titulo-categorias">Categorías destacadas</h2>
+      <a href="productos.html#todas" class="ver-todas">Ver todas las categorías →</a>
+
+      <div id="lista-categorias">
+        <article class="categoria">
+          <a href="productos.html?categoria=celulares">
+            <figure>
+              <img src="img/cat-celulares.jpg" alt="Categoría Celulares" width="80" height="80">
+            </figure>
+            <h3>Celulares</h3>
+          </a>
+        </article>
+
+        <article class="categoria">
+          <a href="productos.html?categoria=computadoras">
+            <figure>
+              <img src="img/cat-computadoras.jpg" alt="Categoría Computadoras" width="80" height="80">
+            </figure>
+            <h3>Computadoras</h3>
+          </a>
+        </article>
+
+        <article class="categoria">
+          <a href="productos.html?categoria=audio">
+            <figure>
+              <img src="img/cat-audio.jpg" alt="Categoría Audio" width="80" height="80">
+            </figure>
+            <h3>Audio</h3>
+          </a>
+        </article>
+
+        <article class="categoria">
+          <a href="productos.html?categoria=accesorios">
+            <figure>
+              <img src="img/cat-accesorios.jpg" alt="Categoría Accesorios" width="80" height="80">
+            </figure>
+            <h3>Accesorios</h3>
+          </a>
+        </article>
+
+        <article class="categoria">
+          <a href="productos.html?categoria=gaming">
+            <figure>
+              <img src="img/cat-gaming.jpg" alt="Categoría Gaming" width="80" height="80">
+            </figure>
+            <h3>Gaming</h3>
+          </a>
+        </article>
+
+        <article class="categoria">
+          <a href="productos.html?categoria=hogar">
+            <figure>
+              <img src="img/cat-hogar.jpg" alt="Categoría Hogar Inteligente" width="80" height="80">
+            </figure>
+            <h3>Hogar Inteligente</h3>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. PRODUCTOS DESTACADOS -->
+    <section id="productos-destacados" aria-labelledby="titulo-productos">
+      <h2 id="titulo-productos">Productos destacados</h2>
+
+      <div id="lista-productos">
+
+        <!-- Producto 1 -->
+        <article class="producto" aria-label="Smartphone Galaxy A54 5G">
+          <header>
+            <figure>
+              <img src="img/producto-galaxy-a54.jpg" alt="Samsung Galaxy A54 5G en color negro" width="200" height="200">
+            </figure>
+          </header>
+          <h3>Smartphone Galaxy A54 5G</h3>
+          <p>Pantalla AMOLED 6.4&quot;, 128GB, cámara triple de 50MP.</p>
+          <p>
+            Precio: <strong>$499.990</strong>
+            <del>$599.990</del>
+            <mark>Oferta: 17% OFF</mark>
+          </p>
+          <p>Disponibilidad: <span class="disponible">En stock</span></p>
+          <footer>
+            <p>⭐⭐⭐⭐☆ <small>(128 reseñas)</small></p>
+            <button type="button" aria-label="Agregar Samsung Galaxy A54 5G al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="producto" aria-label="Laptop Lenovo IdeaPad 3">
+          <header>
+            <figure>
+              <img src="img/producto-lenovo-ideapad.jpg" alt="Laptop Lenovo IdeaPad 3 plateada sobre fondo blanco" width="200" height="200">
+            </figure>
+          </header>
+          <h3>Laptop Lenovo IdeaPad 3</h3>
+          <p>Intel Core i5, 8GB RAM, SSD 512GB, pantalla 15.6&quot;.</p>
+          <p>
+            Precio: <strong>$699.990</strong>
+          </p>
+          <p>Disponibilidad: <span class="disponible">En stock</span></p>
+          <footer>
+            <p>⭐⭐⭐⭐☆ <small>(86 reseñas)</small></p>
+            <button type="button" aria-label="Agregar Laptop Lenovo IdeaPad 3 al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="producto" aria-label="Auriculares Sony WH-CH720N">
+          <header>
+            <figure>
+              <img src="img/producto-sony-wh720n.jpg" alt="Auriculares Sony WH-CH720N en color blanco" width="200" height="200">
+            </figure>
+          </header>
+          <h3>Auriculares Sony WH-CH720N</h3>
+          <p>Cancelación de ruido activa, Bluetooth 5.2, hasta 35 horas.</p>
+          <p>
+            Precio: <strong>$199.990</strong>
+            <del>$249.990</del>
+            <mark>Oferta: 20% OFF</mark>
+          </p>
+          <p>Disponibilidad: <span class="disponible">En stock</span></p>
+          <footer>
+            <p>⭐⭐⭐⭐☆ <small>(73 reseñas)</small></p>
+            <button type="button" aria-label="Agregar Auriculares Sony WH-CH720N al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <!-- Producto 4 -->
+        <article class="producto" aria-label="Smartwatch Xiaomi Watch 2">
+          <header>
+            <figure>
+              <img src="img/producto-xiaomi-watch2.jpg" alt="Smartwatch Xiaomi Watch 2 con correa negra" width="200" height="200">
+            </figure>
+          </header>
+          <h3>Smartwatch Xiaomi Watch 2</h3>
+          <p>GPS integrado, monitor cardíaco, 150+ modos deportivos.</p>
+          <p>
+            Precio: <strong>$159.990</strong>
+          </p>
+          <p>Disponibilidad: <span class="disponible">En stock</span></p>
+          <footer>
+            <p>⭐⭐⭐⭐☆ <small>(40 reseñas)</small></p>
+            <button type="button" aria-label="Agregar Smartwatch Xiaomi Watch 2 al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <!-- Producto 5 -->
+        <article class="producto" aria-label="Control Xbox Series X|S">
+          <header>
+            <figure>
+              <img src="img/producto-control-xbox.jpg" alt="Control inalámbrico Xbox Series X en color negro" width="200" height="200">
+            </figure>
+          </header>
+          <h3>Control Xbox Series X|S</h3>
+          <p>Inalámbrico, compatible con PC y Xbox, gatillos texturizados.</p>
+          <p>
+            Precio: <strong>$74.990</strong>
+            <del>$89.990</del>
+            <mark>Oferta: 16% OFF</mark>
+          </p>
+          <p>Disponibilidad: <span class="disponible">En stock</span></p>
+          <footer>
+            <p>⭐⭐⭐☆☆ <small>(32 reseñas)</small></p>
+            <button type="button" aria-label="Agregar Control Xbox Series X|S al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <!-- Producto 6 -->
+        <article class="producto" aria-label="Echo Dot 5ta Generación">
+          <header>
+            <figure>
+              <img src="img/producto-echo-dot5.jpg" alt="Amazon Echo Dot 5ta generación en color gris" width="200" height="200">
+            </figure>
+          </header>
+          <h3>Echo Dot (5ta Gen)</h3>
+          <p>Altavoz inteligente con Alexa, sonido mejorado, Zigbee integrado.</p>
+          <p>
+            Precio: <strong>$49.990</strong>
+          </p>
+          <p>Disponibilidad: <span class="disponible">En stock</span></p>
+          <footer>
+            <p>⭐⭐⭐⭐⭐ <small>(172 reseñas)</small></p>
+            <button type="button" aria-label="Agregar Echo Dot 5ta Gen al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <!-- Producto 7 -->
+        <article class="producto" aria-label="Tablet iPad 10ma Generación">
+          <header>
+            <figure>
+              <img src="img/producto-ipad-10.jpg" alt="Apple iPad 10ma generación en color azul" width="200" height="200">
+            </figure>
+            <span class="etiqueta-nuevo">NUEVO</span>
+          </header>
+          <h3>iPad 10ma Generación</h3>
+          <p>Chip A14 Bionic, pantalla 10.9&quot;, Wi-Fi + 5G, 64GB.</p>
+          <p>
+            Precio: <strong>$449.990</strong>
+          </p>
+          <p>Disponibilidad: <span class="disponible">En stock</span></p>
+          <footer>
+            <p>⭐⭐⭐⭐⭐ <small>(210 reseñas)</small></p>
+            <button type="button" aria-label="Agregar iPad 10ma Generación al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <!-- Producto 8 -->
+        <article class="producto" aria-label="Teclado Mecánico Logitech G413">
+          <header>
+            <figure>
+              <img src="img/producto-logitech-g413.jpg" alt="Teclado mecánico Logitech G413 con retroiluminación roja" width="200" height="200">
+            </figure>
+          </header>
+          <h3>Teclado Mecánico Logitech G413</h3>
+          <p>Switches Romer-G, retroiluminación LED, construcción en aluminio.</p>
+          <p>
+            Precio: <strong>$89.990</strong>
+            <del>$109.990</del>
+            <mark>Oferta: 18% OFF</mark>
+          </p>
+          <p>Disponibilidad: <span class="agotado">Pocas unidades</span></p>
+          <footer>
+            <p>⭐⭐⭐⭐☆ <small>(55 reseñas)</small></p>
+            <button type="button" aria-label="Agregar Teclado Mecánico Logitech G413 al carrito">🛒 Agregar al carrito</button>
+          </footer>
+        </article>
+
+      </div><!-- fin #lista-productos -->
+    </section>
+
+    <!-- 4. BENEFICIOS / GARANTÍAS -->
+    <section id="beneficios" aria-label="Por qué comprarnos">
+      <article>
+        <span>🛡️</span>
+        <h3>Compra protegida</h3>
+        <p>Tus datos siempre seguros</p>
+      </article>
+      <article>
+        <span>🔄</span>
+        <h3>Devoluciones fáciles</h3>
+        <p>Hasta 30 días para devoluciones</p>
+      </article>
+      <article>
+        <span>💰</span>
+        <h3>Ofertas exclusivas</h3>
+        <p>Descuentos y promociones</p>
+      </article>
+      <article>
+        <span>🎁</span>
+        <h3>Programa de puntos</h3>
+        <p>Acumula y canjea beneficios</p>
+      </article>
+    </section>
+
+    <section id="laboratorio-html5" aria-labelledby="titulo-lab">
+      <h2 id="titulo-lab">Laboratorio HTML5</h2>
+      <p>Demostración de etiquetas menos comunes del estándar HTML5.</p>
+
+      <!-- ruby / rt / rp -->
+      <article>
+        <h3>Anotaciones Ruby</h3>
+        <p>
+          <ruby>HTML<rp>(</rp><rt>HyperText Markup Language</rt><rp>)</rp></ruby> es la base de la web.
+        </p>
+      </article>
+
+      <!-- bdi / bdo -->
+      <article>
+        <h3>Dirección de texto</h3>
+        <p>Usuario: <bdi>مرحبا</bdi> — texto en árabe embebido sin afectar dirección.</p>
+        <p>Texto invertido: <bdo dir="rtl">TechStore Online</bdo></p>
+      </article>
+
+      <!-- wbr -->
+      <article>
+        <h3>Quiebre de línea sugerido</h3>
+        <p>URL larga: https://www.techstore<wbr>.online<wbr>/productos<wbr>/laptops<wbr>/lenovo</p>
+      </article>
+
+      <!-- data -->
+      <article>
+        <h3>Elemento data con valor semántico</h3>
+        <ul>
+          <li><data value="SKU-1001">Laptop Gamer Pro</data></li>
+          <li><data value="SKU-1002">Smartphone Ultra X</data></li>
+          <li><data value="SKU-1003">Auriculares SoundPro X1</data></li>
+        </ul>
+      </article>
+
+      <!-- var, code, kbd, samp, pre -->
+      <article>
+        <h3>Elementos de código</h3>
+        <p>La variable <var>precio</var> almacena el valor del producto.</p>
+        <p>Función: <code>calcularTotal(carrito)</code></p>
+        <p>Presiona <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+        <p>Resultado: <samp>Compra exitosa. Orden #ORD-0042</samp></p>
+        <pre><code>const total = carrito.reduce((sum, p) =&gt; sum + p.precio, 0);</code></pre>
+      </article>
+
+      <!-- sub / sup / ins / del -->
+      <article>
+        <h3>Texto formateado</h3>
+        <p>H<sub>2</sub>O — fórmula del agua.</p>
+        <p>E = mc<sup>2</sup> — fórmula de Einstein.</p>
+        <p>Precio anterior: <del>$99.990</del> — Nuevo precio: <ins>$79.990</ins></p>
+      </article>
+
+      <!-- q / blockquote / cite -->
+      <article>
+        <h3>Citas</h3>
+        <p>Según nuestros clientes: <q>La mejor tienda tecnológica del país.</q></p>
+        <blockquote cite="https://techblog.example.com/resena-techstore">
+          <p>TechStore Online ha revolucionado la forma en que compramos tecnología, ofreciendo precios competitivos y una experiencia de usuario inmejorable.</p>
+          <footer>— <cite>TechBlog, Revista Digital 2024</cite></footer>
+        </blockquote>
+      </article>
+
+      <!-- abbr / dfn / time / address -->
+      <article>
+        <h3>Semántica de contenido</h3>
+        <p><abbr title="HyperText Markup Language">HTML</abbr> es el lenguaje de marcado de la web.</p>
+        <p><dfn>Ecommerce</dfn> es el comercio realizado a través de medios electrónicos.</p>
+        <p>Última actualización: <time datetime="2024-12-01">1 de diciembre de 2024</time></p>
+      </article>
+
+      <!-- dialog -->
+      <article>
+        <h3>Diálogo modal</h3>
+        <button type="button">
+          Abrir demo de &lt;dialog&gt;
+        </button>
+        <dialog id="modal-demo" aria-labelledby="modal-titulo">
+          <h3 id="modal-titulo">¡Oferta especial!</h3>
+          <p>Usa el código <strong>TECH10</strong> para obtener un <mark>10% de descuento</mark> en tu primera compra.</p>
+          <form method="dialog">
+            <button type="submit">Cerrar</button>
+          </form>
+        </dialog>
+      </article>
+
+      <!-- canvas -->
+      <article>
+        <h3>Canvas HTML5</h3>
+        <canvas id="canvas-demo" width="300" height="100" aria-label="Gráfico de barras de ventas por categoría">
+          Tu navegador no soporta el elemento canvas.
+        </canvas>
+
+      </article>
+
+      <!-- svg -->
+      <article>
+        <h3>SVG - Logotipo vectorial</h3>
+        <svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-label="Logotipo TechStore SVG">
+          <rect width="120" height="60" rx="8"/>
+          <text x="10" y="25">Tech</text>
+          <text x="10" y="45">Store</text>
+        </svg>
+      </article>
+
+      <!-- template -->
+      <article>
+        <h3>Elemento &lt;template&gt;</h3>
+        <p>Plantilla de producto (no visible, usada por JavaScript):</p>
+        <template id="plantilla-producto">
+          <article class="producto">
+            <img src="" alt="">
+            <h3></h3>
+            <p class="precio"></p>
+            <button type="button">Agregar al carrito</button>
+          </article>
+        </template>
+        <p><small><em>El template no se renderiza hasta ser activado por JavaScript.</em></small></p>
+      </article>
+
+    </section><!-- fin #laboratorio-html5 -->
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <div id="footer-contenido">
+
+      <section aria-labelledby="footer-marca">
+        <h3 id="footer-marca">TechStore</h3>
+        <p>Tu tienda online de tecnología favorita.</p>
+        <nav aria-label="Redes sociales">
+          <ul>
+            <li><a href="#" aria-label="Facebook de TechStore">Facebook</a></li>
+            <li><a href="#" aria-label="Instagram de TechStore">Instagram</a></li>
+            <li><a href="#" aria-label="YouTube de TechStore">YouTube</a></li>
+            <li><a href="#" aria-label="Twitter de TechStore">Twitter</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section aria-labelledby="footer-info">
+        <h3 id="footer-info">Información</h3>
+        <ul>
+          <li><a href="acerca.html">Sobre nosotros</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="footer-ayuda">
+        <h3 id="footer-ayuda">Ayuda</h3>
+        <ul>
+          <li><a href="contacto.html">Centro de ayuda</a></li>
+          <li><a href="#">Métodos de pago</a></li>
+          <li><a href="#">Envíos y entregas</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="footer-cuenta">
+        <h3 id="footer-cuenta">Mi cuenta</h3>
+        <ul>
+          <li><a href="#">Iniciar sesión</a></li>
+          <li><a href="#">Mis pedidos</a></li>
+          <li><a href="#">Lista de deseos</a></li>
+          <li><a href="#">Mi perfil</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="footer-newsletter">
+        <h3 id="footer-newsletter">Newsletter</h3>
+        <p>Recibe las mejores ofertas y novedades.</p>
+        <form action="#" method="post" aria-label="Suscripción al newsletter">
+          <label for="email-newsletter" class="sr-only">Tu correo electrónico</label>
+          <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required autocomplete="email">
+          <button type="submit">Suscribirme</button>
+        </form>
+      </section>
+
+    </div><!-- fin #footer-contenido -->
+
+    <div id="footer-inferior">
+      <address>
+        TechStore Online S.A. — Av. Tecnología 1234, Santiago, Chile —
+        <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a> —
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </address>
+      <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>

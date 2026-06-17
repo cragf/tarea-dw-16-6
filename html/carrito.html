@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carrito de compras — TechStore Online">
+  <meta name="author" content="TechStore Online">
+  <title>Carrito de Compras — TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header>
+    <div id="barra-superior">
+      <p>🚚 Envío gratis en compras mayores a $50.000</p>
+      <nav aria-label="Navegación secundaria">
+        <ul>
+          <li><a href="contacto.html">Ayuda</a></li>
+          <li><a href="#">Seguimiento de pedidos</a></li>
+          <li><a href="#">Mi cuenta</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="barra-principal">
+      <a href="index.html" id="logo" aria-label="TechStore - Ir al inicio">
+        <span>🖥️</span>
+        <strong>TechStore</strong>
+      </a>
+
+      <form action="#" method="get" role="search" aria-label="Búsqueda de productos">
+        <label for="busqueda" class="sr-only">Buscar productos</label>
+        <input type="search" id="busqueda" name="q" placeholder="Buscar productos..." autocomplete="on">
+        <button type="submit" aria-label="Buscar">🔍 Buscar</button>
+      </form>
+
+      <div id="acciones-usuario">
+        <a href="#" aria-label="Favoritos">❤️ Favoritos <span>0</span></a>
+        <a href="carrito.html" aria-label="Carrito de compras" aria-current="page">🛒 Carrito <span>3</span></a>
+      </div>
+    </div>
+
+    <nav id="menu-principal" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="productos.html?oferta=true">Ofertas</a></li>
+        <li><a href="productos.html?nuevo=true">Novedades</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li aria-current="page">Carrito de compras</li>
+      </ol>
+    </nav>
+
+    <h1>🛒 Tu carrito de compras</h1>
+
+    <!-- Progreso del pedido -->
+    <section id="progreso-pedido" aria-labelledby="titulo-progreso">
+      <h2 id="titulo-progreso">Progreso del pedido</h2>
+      <ol id="pasos-pedido">
+        <li class="paso-activo" aria-current="step">Carrito</li>
+        <li>Datos de envío</li>
+        <li>Pago</li>
+        <li>Confirmación</li>
+      </ol>
+      <label for="barra-progreso">Paso 1 de 4</label>
+      <progress id="barra-progreso" value="1" max="4" aria-label="Progreso del proceso de compra: paso 1 de 4">25%</progress>
+    </section>
+
+    <div id="contenedor-carrito">
+
+      <!-- ===== TABLA DE PRODUCTOS ===== -->
+      <section id="productos-carrito" aria-labelledby="titulo-carrito">
+        <h2 id="titulo-carrito">Productos en tu carrito</h2>
+
+        <table>
+          <caption>Lista de productos seleccionados para comprar</caption>
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Precio unitario</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Subtotal</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- Producto 1 -->
+            <tr>
+              <td>
+                <figure>
+                  <img src="img/producto-lenovo-ideapad.jpg" alt="Laptop Lenovo IdeaPad 3" width="80" height="80">
+                  <figcaption>
+                    <strong>Laptop Lenovo IdeaPad 3</strong><br>
+                    <small>Color: Plata — RAM: 8GB</small><br>
+                    <small><abbr title="Stock Keeping Unit">SKU</abbr>: LNV-IDP3-I5-512</small>
+                  </figcaption>
+                </figure>
+              </td>
+              <td>$699.990</td>
+              <td>
+                <form action="#" method="post" aria-label="Actualizar cantidad de Laptop Lenovo">
+                  <label for="qty-1" class="sr-only">Cantidad de Laptop Lenovo IdeaPad 3</label>
+                  <input type="number" id="qty-1" name="cantidad" value="1" min="1" max="10" step="1">
+                  <button type="submit" aria-label="Actualizar cantidad">↺</button>
+                </form>
+              </td>
+              <td><strong>$699.990</strong></td>
+              <td>
+                <button type="button" aria-label="Eliminar Laptop Lenovo IdeaPad 3 del carrito">🗑️ Eliminar</button>
+              </td>
+            </tr>
+
+            <!-- Producto 2 -->
+            <tr>
+              <td>
+                <figure>
+                  <img src="img/producto-sony-wh720n.jpg" alt="Auriculares Sony WH-CH720N" width="80" height="80">
+                  <figcaption>
+                    <strong>Auriculares Sony WH-CH720N</strong><br>
+                    <small>Color: Blanco</small><br>
+                    <small><abbr title="Stock Keeping Unit">SKU</abbr>: SNY-WH720N-W</small>
+                  </figcaption>
+                </figure>
+              </td>
+              <td><del>$249.990</del> <mark>$199.990</mark></td>
+              <td>
+                <form action="#" method="post" aria-label="Actualizar cantidad de Auriculares Sony">
+                  <label for="qty-2" class="sr-only">Cantidad de Auriculares Sony WH-CH720N</label>
+                  <input type="number" id="qty-2" name="cantidad" value="1" min="1" max="10" step="1">
+                  <button type="submit" aria-label="Actualizar cantidad">↺</button>
+                </form>
+              </td>
+              <td><strong>$199.990</strong></td>
+              <td>
+                <button type="button" aria-label="Eliminar Auriculares Sony del carrito">🗑️ Eliminar</button>
+              </td>
+            </tr>
+
+            <!-- Producto 3 -->
+            <tr>
+              <td>
+                <figure>
+                  <img src="img/producto-anker-hub.jpg" alt="Hub USB-C Anker 7 en 1" width="80" height="80">
+                  <figcaption>
+                    <strong>Hub USB-C Anker 7 en 1</strong><br>
+                    <small>Color: Plata</small><br>
+                    <small><abbr title="Stock Keeping Unit">SKU</abbr>: ANK-HUB7C-1</small>
+                  </figcaption>
+                </figure>
+              </td>
+              <td>$39.990</td>
+              <td>
+                <form action="#" method="post" aria-label="Actualizar cantidad de Hub Anker">
+                  <label for="qty-3" class="sr-only">Cantidad de Hub USB-C Anker</label>
+                  <input type="number" id="qty-3" name="cantidad" value="2" min="1" max="10" step="1">
+                  <button type="submit" aria-label="Actualizar cantidad">↺</button>
+                </form>
+              </td>
+              <td><strong>$79.980</strong></td>
+              <td>
+                <button type="button" aria-label="Eliminar Hub Anker del carrito">🗑️ Eliminar</button>
+              </td>
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5">
+                <button type="button" id="btn-vaciar-carrito" aria-label="Vaciar carrito completo">🗑️ Vaciar carrito</button>
+                <a href="productos.html">← Seguir comprando</a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+      </section>
+
+      <!-- ===== RESUMEN Y PAGO ===== -->
+      <aside id="resumen-compra" aria-labelledby="titulo-resumen">
+        <h2 id="titulo-resumen">Resumen de compra</h2>
+
+        <!-- Cupón de descuento -->
+        <form action="#" method="post" aria-label="Aplicar cupón de descuento">
+          <fieldset>
+            <legend>¿Tienes un cupón?</legend>
+            <label for="cupon">Código de descuento:</label>
+            <input type="text" id="cupon" name="cupon" placeholder="Ej: TECH10" autocomplete="off">
+            <button type="submit">Aplicar</button>
+          </fieldset>
+        </form>
+
+        <!-- Desglose de precios -->
+        <table id="tabla-resumen">
+          <caption class="sr-only">Desglose del total de tu compra</caption>
+          <tbody>
+            <tr>
+              <th scope="row">Subtotal (4 productos)</th>
+              <td>$979.960</td>
+            </tr>
+            <tr>
+              <th scope="row">Descuentos</th>
+              <td><mark>− $50.000</mark></td>
+            </tr>
+            <tr>
+              <th scope="row">Envío</th>
+              <td>Gratis ✅</td>
+            </tr>
+            <tr>
+              <th scope="row"><abbr title="Impuesto al Valor Agregado">IVA</abbr> (19%)</th>
+              <td>$175.791</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row"><strong>Total</strong></th>
+              <td><strong>$929.960</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <!-- Indicador de ahorro -->
+        <p>Estás ahorrando: <strong>$50.000</strong> en esta compra 🎉</p>
+
+        <!-- Medidor de beneficios -->
+        <div id="beneficio-envio" aria-label="Beneficio de envío gratis">
+          <p>¡Felicitaciones! Tienes envío gratis.</p>
+          <label for="metros-envio">Progreso hacia envío gratis:</label>
+          <meter id="metros-envio" value="929960" min="0" max="50000" low="20000" high="40000" optimum="50000" aria-label="Monto de compra para envío gratis: superado">
+            $929.960 de $50.000 mínimo
+          </meter>
+        </div>
+
+        <!-- Porcentaje de descuento aplicado -->
+        <div id="descuento-aplicado" aria-label="Descuento aplicado">
+          <label for="barra-descuento">Descuento aplicado (5%):</label>
+          <meter id="barra-descuento" value="5" min="0" max="100" aria-label="Porcentaje de descuento: 5%">
+            5% de descuento
+          </meter>
+        </div>
+
+        <!-- Formas de pago -->
+        <section aria-labelledby="titulo-pago">
+          <h3 id="titulo-pago">Método de pago</h3>
+          <form action="#" method="post" aria-label="Selección de método de pago">
+            <fieldset>
+              <legend>Selecciona tu forma de pago</legend>
+              <label><input type="radio" name="pago" value="tarjeta-credito" checked> Tarjeta de crédito</label>
+              <label><input type="radio" name="pago" value="tarjeta-debito"> Tarjeta de débito</label>
+              <label><input type="radio" name="pago" value="transferencia"> Transferencia bancaria</label>
+              <label><input type="radio" name="pago" value="efectivo"> Pago en efectivo</label>
+            </fieldset>
+            <button type="submit" id="btn-pagar">💳 Proceder al pago</button>
+          </form>
+        </section>
+
+        <!-- Sellos de seguridad -->
+        <ul id="sellos-seguridad" aria-label="Garantías de compra segura">
+          <li>🔒 Pago 100% seguro</li>
+          <li>🛡️ Datos protegidos</li>
+          <li>✅ Garantía de devolución</li>
+        </ul>
+
+      </aside>
+
+    </div><!-- fin #contenedor-carrito -->
+
+    <!-- Productos sugeridos -->
+    <section id="sugeridos" aria-labelledby="titulo-sugeridos">
+      <h2 id="titulo-sugeridos">También te puede interesar</h2>
+      <div class="grilla-pequeña">
+        <article class="producto">
+          <figure>
+            <img src="img/producto-logitech-g413.jpg" alt="Teclado Mecánico Logitech G413" width="120" height="120">
+          </figure>
+          <h3><a href="producto.html">Teclado Logitech G413</a></h3>
+          <p><strong>$89.990</strong></p>
+          <button type="button" aria-label="Agregar Teclado Logitech al carrito">🛒 Agregar</button>
+        </article>
+
+        <article class="producto">
+          <figure>
+            <img src="img/producto-razer-deathadder.jpg" alt="Mouse Razer DeathAdder V3" width="120" height="120">
+          </figure>
+          <h3><a href="producto.html">Mouse Razer DeathAdder V3</a></h3>
+          <p><strong>$119.990</strong></p>
+          <button type="button" aria-label="Agregar Mouse Razer al carrito">🛒 Agregar</button>
+        </article>
+
+        <article class="producto">
+          <figure>
+            <img src="img/producto-lg-monitor4k.jpg" alt="Monitor LG 27 pulgadas 4K" width="120" height="120">
+          </figure>
+          <h3><a href="producto.html">Monitor LG 27&quot; 4K</a></h3>
+          <p><strong>$379.990</strong></p>
+          <button type="button" aria-label="Agregar Monitor LG al carrito">🛒 Agregar</button>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <div id="footer-contenido">
+      <section aria-labelledby="footer-marca">
+        <h3 id="footer-marca">TechStore</h3>
+        <p>Tu tienda online de tecnología favorita.</p>
+      </section>
+      <section aria-labelledby="footer-info">
+        <h3 id="footer-info">Información</h3>
+        <ul>
+          <li><a href="acerca.html">Sobre nosotros</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="footer-ayuda">
+        <h3 id="footer-ayuda">Ayuda</h3>
+        <ul>
+          <li><a href="contacto.html">Centro de ayuda</a></li>
+          <li><a href="#">Métodos de pago</a></li>
+          <li><a href="#">Envíos y entregas</a></li>
+          <li><a href="#">Devoluciones</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="footer-cuenta">
+        <h3 id="footer-cuenta">Mi cuenta</h3>
+        <ul>
+          <li><a href="#">Iniciar sesión</a></li>
+          <li><a href="#">Mis pedidos</a></li>
+          <li><a href="#">Lista de deseos</a></li>
+          <li><a href="#">Mi perfil</a></li>
+        </ul>
+      </section>
+    </div>
+    <div id="footer-inferior">
+      <address>
+        TechStore Online S.A. — Av. Tecnología 1234, Santiago, Chile —
+        <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+      </address>
+      <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
