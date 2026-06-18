@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto — TechStore Online.">
+  <meta name="author" content="TechStore Online">
+  <title>Contacto — TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Navegación secundaria">
+      <ul>
+        <li><a href="contacto.html" aria-current="page">Ayuda</a></li>
+        <li><a href="#">Seguimiento de pedidos</a></li>
+        <li><a href="#">Mi cuenta</a></li>
+      </ul>
+    </nav>
+    <a href="index.html" aria-label="TechStore - Ir al inicio"><strong>TechStore</strong></a>
+    <form action="#" method="get" role="search">
+      <label for="busqueda">Buscar productos</label>
+      <input type="search" id="busqueda" name="q" placeholder="Buscar productos...">
+      <button type="submit">Buscar</button>
+    </form>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Novedades</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contáctanos</h1>
+
+    <form action="#" method="post" autocomplete="on">
+
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required minlength="3" maxlength="100" autocomplete="name">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ej: juan@correo.com" required autocomplete="email">
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" minlength="8" autocomplete="new-password">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" pattern="[\+]?[0-9\s\-]+">
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" placeholder="Ej: 25" min="18" max="120" step="1">
+
+        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" min="1900-01-01" max="2010-12-31">
+
+        <label for="horario">Horario preferido de contacto:</label>
+        <input type="datetime-local" id="horario" name="horario">
+
+        <label for="color-tema">Color favorito:</label>
+        <input type="color" id="color-tema" name="color_tema" value="#1E3A8A">
+
+        <label for="prioridad">Prioridad (1-5):</label>
+        <input type="range" id="prioridad" name="prioridad" min="1" max="5" step="1" value="3">
+        <output for="prioridad">3</output>
+
+        <label for="adjunto">Adjuntar archivo:</label>
+        <input type="file" id="adjunto" name="adjunto" accept=".jpg,.jpeg,.png,.pdf" multiple>
+
+        <label for="sitio-web">Sitio web:</label>
+        <input type="url" id="sitio-web" name="sitio_web" placeholder="https://www.tusitio.com">
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" value="Chile" readonly>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Consulta</legend>
+
+        <label for="tipo-consulta">Tipo de consulta:</label>
+        <select id="tipo-consulta" name="tipo_consulta" required>
+          <option value="">— Selecciona —</option>
+          <option value="pedido">Estado de pedido</option>
+          <option value="producto">Información de producto</option>
+          <option value="pago">Pago</option>
+          <option value="devolucion">Devolución</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu consulta..." required minlength="20" maxlength="2000"></textarea>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Consentimiento</legend>
+
+        <label>
+          <input type="checkbox" name="acepta_terminos" value="si" required>
+          Acepto los Términos y Condiciones.
+        </label>
+
+        <label>
+          <input type="checkbox" name="acepta_newsletter" value="si">
+          Quiero recibir ofertas por correo.
+        </label>
+
+        <label><input type="radio" name="primera_consulta" value="si"> Primera vez</label>
+        <label><input type="radio" name="primera_consulta" value="no"> Ya he contactado antes</label>
+
+        <input type="hidden" name="origen" value="pagina-contacto">
+
+      </fieldset>
+
+      <button type="submit">Enviar mensaje</button>
+      <button type="reset">Limpiar</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <section>
+      <h3>TechStore</h3>
+      <p>Tu tienda online de tecnología favorita.</p>
+    </section>
+    <section>
+      <h3>Información</h3>
+      <ul>
+        <li><a href="acerca.html">Sobre nosotros</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Ayuda</h3>
+      <ul>
+        <li><a href="contacto.html">Centro de ayuda</a></li>
+        <li><a href="#">Métodos de pago</a></li>
+        <li><a href="#">Envíos y entregas</a></li>
+        <li><a href="#">Devoluciones</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Mi cuenta</h3>
+      <ul>
+        <li><a href="#">Iniciar sesión</a></li>
+        <li><a href="#">Mis pedidos</a></li>
+        <li><a href="#">Lista de deseos</a></li>
+        <li><a href="#">Mi perfil</a></li>
+      </ul>
+    </section>
+    <address>
+      TechStore Online S.A. — Av. Tecnología 1234, Santiago, Chile —
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
+  </footer>
+
+</body>
+</html>

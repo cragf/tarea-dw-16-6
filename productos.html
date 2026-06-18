@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos TechStore Online.">
+  <meta name="author" content="TechStore Online">
+  <title>Productos — TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Navegación secundaria">
+      <ul>
+        <li><a href="contacto.html">Ayuda</a></li>
+        <li><a href="#">Seguimiento de pedidos</a></li>
+        <li><a href="#">Mi cuenta</a></li>
+      </ul>
+    </nav>
+    <a href="index.html" aria-label="TechStore - Ir al inicio"><strong>TechStore</strong></a>
+    <form action="#" method="get" role="search">
+      <label for="busqueda">Buscar productos</label>
+      <input type="search" id="busqueda" name="q" placeholder="Buscar productos...">
+      <button type="submit">Buscar</button>
+    </form>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Novedades</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Catálogo de Productos</h1>
+
+    <div>
+
+      <!-- Filtros -->
+      <aside aria-label="Filtros de búsqueda">
+        <h2>Filtros</h2>
+        <form action="#" method="get">
+
+          <fieldset>
+            <legend>Categoría</legend>
+            <label><input type="checkbox" name="categoria" value="laptops"> Laptops</label>
+            <label><input type="checkbox" name="categoria" value="smartphones"> Smartphones</label>
+            <label><input type="checkbox" name="categoria" value="accesorios"> Accesorios</label>
+            <label><input type="checkbox" name="categoria" value="gaming"> Gaming</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Precio</legend>
+            <label><input type="radio" name="precio" value="0-50000"> Hasta $50.000</label>
+            <label><input type="radio" name="precio" value="50000-150000"> $50.000 – $150.000</label>
+            <label><input type="radio" name="precio" value="150000-400000"> $150.000 – $400.000</label>
+            <label><input type="radio" name="precio" value="400000+"> Más de $400.000</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Marca</legend>
+            <label for="marca">Seleccionar marca:</label>
+            <select id="marca" name="marca">
+              <option value="">Todas</option>
+              <option value="samsung">Samsung</option>
+              <option value="apple">Apple</option>
+              <option value="lenovo">Lenovo</option>
+              <option value="sony">Sony</option>
+              <option value="xiaomi">Xiaomi</option>
+              <option value="logitech">Logitech</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Color</legend>
+            <label><input type="checkbox" name="color" value="negro"> Negro</label>
+            <label><input type="checkbox" name="color" value="blanco"> Blanco</label>
+            <label><input type="checkbox" name="color" value="gris"> Gris</label>
+            <label><input type="checkbox" name="color" value="plata"> Plata</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Buscar por nombre</legend>
+            <label for="buscar-producto">Nombre:</label>
+            <input type="text" id="buscar-producto" name="buscar" list="sugerencias">
+            <datalist id="sugerencias">
+              <option value="Laptop Lenovo">
+              <option value="Samsung Galaxy">
+              <option value="Auriculares Sony">
+              <option value="iPad Apple">
+              <option value="Control Xbox">
+            </datalist>
+          </fieldset>
+
+          <button type="submit">Aplicar filtros</button>
+          <button type="reset">Limpiar</button>
+        </form>
+      </aside>
+
+      <!-- Productos -->
+      <section>
+        <h2>Todos los productos</h2>
+
+        <article>
+          <header>
+            <img src="img/producto-galaxy-a54.jpg" alt="Samsung Galaxy A54 5G negro">
+          </header>
+          <h3><a href="producto.html">Smartphone Galaxy A54 5G</a></h3>
+          <p>Pantalla AMOLED 6.4&quot;, 128GB, cámara triple 50MP.</p>
+          <p><del>$599.990</del> <strong>$499.990</strong> <mark>17% OFF</mark></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="img/producto-lenovo-ideapad.jpg" alt="Laptop Lenovo IdeaPad 3 plateada">
+          </header>
+          <h3><a href="producto.html">Laptop Lenovo IdeaPad 3</a></h3>
+          <p>Intel Core i5, 8GB RAM, SSD 512GB, 15.6&quot;.</p>
+          <p><strong>$699.990</strong></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="img/producto-sony-wh720n.jpg" alt="Auriculares Sony WH-CH720N blancos">
+          </header>
+          <h3><a href="producto.html">Auriculares Sony WH-CH720N</a></h3>
+          <p>Cancelación de ruido activa, Bluetooth 5.2, 35h.</p>
+          <p><del>$249.990</del> <strong>$199.990</strong> <mark>20% OFF</mark></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="img/producto-xiaomi-watch2.jpg" alt="Smartwatch Xiaomi Watch 2 negro">
+          </header>
+          <h3><a href="producto.html">Smartwatch Xiaomi Watch 2</a></h3>
+          <p>GPS integrado, monitor cardíaco, 150+ modos deportivos.</p>
+          <p><strong>$159.990</strong></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="img/producto-control-xbox.jpg" alt="Control Xbox Series X negro">
+          </header>
+          <h3><a href="producto.html">Control Xbox Series X|S</a></h3>
+          <p>Inalámbrico, compatible con PC y Xbox.</p>
+          <p><del>$89.990</del> <strong>$74.990</strong> <mark>16% OFF</mark></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="img/producto-echo-dot5.jpg" alt="Amazon Echo Dot 5ta generación gris">
+          </header>
+          <h3><a href="producto.html">Echo Dot (5ta Gen)</a></h3>
+          <p>Altavoz inteligente con Alexa, sonido mejorado.</p>
+          <p><strong>$49.990</strong></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="img/producto-ipad-10.jpg" alt="Apple iPad 10ma generación azul">
+          </header>
+          <h3><a href="producto.html">iPad 10ma Generación</a></h3>
+          <p>Chip A14 Bionic, pantalla 10.9&quot;, 64GB.</p>
+          <p><strong>$449.990</strong></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <img src="img/producto-logitech-g413.jpg" alt="Teclado Logitech G413 retroiluminado">
+          </header>
+          <h3><a href="producto.html">Teclado Mecánico Logitech G413</a></h3>
+          <p>Switches Romer-G, retroiluminación LED, aluminio.</p>
+          <p><del>$109.990</del> <strong>$89.990</strong> <mark>18% OFF</mark></p>
+          <footer>
+            <button type="button">Agregar al carrito</button>
+          </footer>
+        </article>
+
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <section>
+      <h3>TechStore</h3>
+      <p>Tu tienda online de tecnología favorita.</p>
+    </section>
+    <section>
+      <h3>Información</h3>
+      <ul>
+        <li><a href="acerca.html">Sobre nosotros</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Ayuda</h3>
+      <ul>
+        <li><a href="contacto.html">Centro de ayuda</a></li>
+        <li><a href="#">Métodos de pago</a></li>
+        <li><a href="#">Envíos y entregas</a></li>
+        <li><a href="#">Devoluciones</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Mi cuenta</h3>
+      <ul>
+        <li><a href="#">Iniciar sesión</a></li>
+        <li><a href="#">Mis pedidos</a></li>
+        <li><a href="#">Lista de deseos</a></li>
+        <li><a href="#">Mi perfil</a></li>
+      </ul>
+    </section>
+    <address>
+      TechStore Online S.A. — Av. Tecnología 1234, Santiago, Chile —
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
+  </footer>
+
+</body>
+</html>

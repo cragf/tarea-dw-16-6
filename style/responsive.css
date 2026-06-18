@@ -1,0 +1,77 @@
+/* ===========================
+   RESPONSIVE.CSS
+=========================== */
+
+/* MÓVIL — max 768px */
+@media (max-width: 768px) {
+
+  main {
+    padding-top: 160px;
+  }
+
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.2rem; }
+
+  /* Grid a 1 columna */
+  main > section:nth-child(3) {
+    grid-template-columns: 1fr;
+  }
+
+  /* Flex a columna en contenedor productos */
+  main > div {
+    flex-direction: column;
+  }
+
+  main > div > aside {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  /* Header en columna */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Footer en columna */
+  footer {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  td, th {
+    padding: 8px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+}
+
+/* TABLET — 769px a 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  main {
+    padding-top: 140px;
+  }
+
+  /* Grid a 2 columnas */
+  main > section:nth-child(3) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* ESCRITORIO — min 1025px */
+@media (min-width: 1025px) {
+
+  /* Grid a 4 columnas */
+  main > section:nth-child(3) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}

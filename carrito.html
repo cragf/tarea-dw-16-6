@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carrito de compras — TechStore Online.">
+  <meta name="author" content="TechStore Online">
+  <title>Carrito de Compras — TechStore Online</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Navegación secundaria">
+      <ul>
+        <li><a href="contacto.html">Ayuda</a></li>
+        <li><a href="#">Seguimiento de pedidos</a></li>
+        <li><a href="#">Mi cuenta</a></li>
+      </ul>
+    </nav>
+    <a href="index.html" aria-label="TechStore - Ir al inicio"><strong>TechStore</strong></a>
+    <form action="#" method="get" role="search">
+      <label for="busqueda">Buscar productos</label>
+      <input type="search" id="busqueda" name="q" placeholder="Buscar productos...">
+      <button type="submit">Buscar</button>
+    </form>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Novedades</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Carrito de compras</h1>
+
+    <!-- Progreso del pedido -->
+    <section>
+      <h2>Progreso del pedido</h2>
+      <label for="progreso-pedido">Paso 1 de 4</label>
+      <progress id="progreso-pedido" value="3" max="10">30%</progress>
+    </section>
+
+    <!-- Lista de productos -->
+    <section>
+      <h2>Productos agregados</h2>
+
+      <table>
+        <caption>Lista de productos en tu carrito</caption>
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Subtotal</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="img/producto-lenovo-ideapad.jpg" alt="Laptop Lenovo IdeaPad 3" width="60" height="60">
+              Laptop Lenovo IdeaPad 3
+            </td>
+            <td>$699.990</td>
+            <td>
+              <label for="qty-1">Cantidad</label>
+              <input type="number" id="qty-1" name="cantidad" value="1" min="1" max="10">
+            </td>
+            <td>$699.990</td>
+            <td><button type="button">Eliminar</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/producto-sony-wh720n.jpg" alt="Auriculares Sony WH-CH720N" width="60" height="60">
+              Auriculares Sony WH-CH720N
+            </td>
+            <td>$199.990</td>
+            <td>
+              <label for="qty-2">Cantidad</label>
+              <input type="number" id="qty-2" name="cantidad" value="1" min="1" max="10">
+            </td>
+            <td>$199.990</td>
+            <td><button type="button">Eliminar</button></td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/producto-anker-hub.jpg" alt="Hub USB-C Anker 7 en 1" width="60" height="60">
+              Hub USB-C Anker 7 en 1
+            </td>
+            <td>$39.990</td>
+            <td>
+              <label for="qty-3">Cantidad</label>
+              <input type="number" id="qty-3" name="cantidad" value="2" min="1" max="10">
+            </td>
+            <td>$79.980</td>
+            <td><button type="button">Eliminar</button></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"><strong>Total</strong></td>
+            <td><strong>$979.960</strong></td>
+            <td><button type="button">Vaciar carrito</button></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- meter: porcentaje de descuento -->
+      <p>Descuento aplicado:</p>
+      <meter value="75" min="0" max="100">75%</meter>
+
+      <!-- progress: progreso del pedido -->
+      <p>Progreso del pedido:</p>
+      <progress value="3" max="10">3 de 10</progress>
+
+      <a href="productos.html">Seguir comprando</a>
+      <button type="button">Proceder al pago</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <section>
+      <h3>TechStore</h3>
+      <p>Tu tienda online de tecnología favorita.</p>
+    </section>
+    <section>
+      <h3>Información</h3>
+      <ul>
+        <li><a href="acerca.html">Sobre nosotros</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Ayuda</h3>
+      <ul>
+        <li><a href="contacto.html">Centro de ayuda</a></li>
+        <li><a href="#">Métodos de pago</a></li>
+        <li><a href="#">Envíos y entregas</a></li>
+        <li><a href="#">Devoluciones</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Mi cuenta</h3>
+      <ul>
+        <li><a href="#">Iniciar sesión</a></li>
+        <li><a href="#">Mis pedidos</a></li>
+        <li><a href="#">Lista de deseos</a></li>
+        <li><a href="#">Mi perfil</a></li>
+      </ul>
+    </section>
+    <address>
+      TechStore Online S.A. — Av. Tecnología 1234, Santiago, Chile —
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
+  </footer>
+
+</body>
+</html>

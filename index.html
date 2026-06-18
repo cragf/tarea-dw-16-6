@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TechStore Online - Tu tienda de tecnología favorita.">
+  <meta name="keywords" content="tecnología, laptops, smartphones, accesorios">
+  <meta name="author" content="TechStore Online">
+  <title>TechStore Online - Tu Tienda de Tecnología</title>
+  <link rel="stylesheet" href="style/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Navegación secundaria">
+      <ul>
+        <li><a href="contacto.html">Ayuda</a></li>
+        <li><a href="#">Seguimiento de pedidos</a></li>
+        <li><a href="#">Mi carrito</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html" aria-label="TechStore - Ir al inicio">
+      <strong>TechStore</strong>
+    </a>
+
+    <form action="#" method="get" role="search">
+      <label for="busqueda">Buscar productos</label>
+      <input type="search" id="busqueda" name="q" placeholder="Buscar productos...">
+      <button type="submit">Buscar</button>
+    </form>
+
+    <nav id="menu-principal" aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Novedades</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Banner promocional -->
+    <section>
+      <h1>Auriculares Inalámbricos SoundPro X1</h1>
+      <p>Sonido premium, cancelación de ruido y hasta 30 horas de batería.</p>
+      <a href="producto.html">Comprar ahora</a>
+      <figure>
+        <picture>
+          <source srcset="img/banner-desktop.jpg" media="(min-width: 768px)">
+          <img src="img/banner-mobile.jpg" alt="Auriculares inalámbricos SoundPro X1 en color negro">
+        </picture>
+        <figcaption>SoundPro X1 — El sonido que mereces</figcaption>
+      </figure>
+    </section>
+
+    <!-- Categorías -->
+    <section>
+      <h2>Categorías destacadas</h2>
+      <article>
+        <a href="productos.html">
+          <img src="img/cat-laptops.jpg" alt="Categoría Laptops">
+          <h3>Laptops</h3>
+        </a>
+      </article>
+      <article>
+        <a href="productos.html">
+          <img src="img/cat-smartphones.jpg" alt="Categoría Smartphones">
+          <h3>Smartphones</h3>
+        </a>
+      </article>
+      <article>
+        <a href="productos.html">
+          <img src="img/cat-accesorios.jpg" alt="Categoría Accesorios">
+          <h3>Accesorios</h3>
+        </a>
+      </article>
+      <article>
+        <a href="productos.html">
+          <img src="img/cat-gaming.jpg" alt="Categoría Gaming">
+          <h3>Gaming</h3>
+        </a>
+      </article>
+    </section>
+
+    <!-- Productos destacados -->
+    <section>
+      <h2>Productos destacados</h2>
+
+      <article>
+        <header>
+          <img src="img/producto-galaxy-a54.jpg" alt="Samsung Galaxy A54 5G en color negro">
+        </header>
+        <h3>Smartphone Galaxy A54 5G</h3>
+        <p>Pantalla AMOLED 6.4&quot;, 128GB, cámara triple 50MP.</p>
+        <p>Precio: <strong>$499.990</strong> <del>$599.990</del> <mark>17% OFF</mark></p>
+        <p>Disponibilidad: En stock</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="img/producto-lenovo-ideapad.jpg" alt="Laptop Lenovo IdeaPad 3 plateada">
+        </header>
+        <h3>Laptop Lenovo IdeaPad 3</h3>
+        <p>Intel Core i5, 8GB RAM, SSD 512GB, 15.6&quot;.</p>
+        <p>Precio: <strong>$699.990</strong></p>
+        <p>Disponibilidad: En stock</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="img/producto-sony-wh720n.jpg" alt="Auriculares Sony WH-CH720N blancos">
+        </header>
+        <h3>Auriculares Sony WH-CH720N</h3>
+        <p>Cancelación de ruido activa, Bluetooth 5.2, 35h de batería.</p>
+        <p>Precio: <strong>$199.990</strong> <del>$249.990</del> <mark>20% OFF</mark></p>
+        <p>Disponibilidad: En stock</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="img/producto-xiaomi-watch2.jpg" alt="Smartwatch Xiaomi Watch 2 con correa negra">
+        </header>
+        <h3>Smartwatch Xiaomi Watch 2</h3>
+        <p>GPS integrado, monitor cardíaco, 150+ modos deportivos.</p>
+        <p>Precio: <strong>$159.990</strong></p>
+        <p>Disponibilidad: En stock</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="img/producto-control-xbox.png" alt="Control inalámbrico Xbox Series X negro">
+        </header>
+        <h3>Control Xbox Series X|S</h3>
+        <p>Inalámbrico, compatible con PC y Xbox.</p>
+        <p>Precio: <strong>$74.990</strong> <del>$89.990</del> <mark>16% OFF</mark></p>
+        <p>Disponibilidad: En stock</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="img/producto-echo-dot5.png" alt="Amazon Echo Dot 5ta generación gris">
+        </header>
+        <h3>Echo Dot (5ta Gen)</h3>
+        <p>Altavoz inteligente con Alexa, sonido mejorado.</p>
+        <p>Precio: <strong>$49.990</strong></p>
+        <p>Disponibilidad: En stock</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="img/producto-ipad-10.jpg" alt="Apple iPad 10ma generación color azul">
+        </header>
+        <h3>iPad 10ma Generación</h3>
+        <p>Chip A14 Bionic, pantalla 10.9&quot;, Wi-Fi + 5G, 64GB.</p>
+        <p>Precio: <strong>$449.990</strong></p>
+        <p>Disponibilidad: En stock</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <img src="img/producto-logitech-g413.jpg" alt="Teclado mecánico Logitech G413 con retroiluminación roja">
+        </header>
+        <h3>Teclado Mecánico Logitech G413</h3>
+        <p>Switches Romer-G, retroiluminación LED, aluminio.</p>
+        <p>Precio: <strong>$89.990</strong> <del>$109.990</del> <mark>18% OFF</mark></p>
+        <p>Disponibilidad: Pocas unidades</p>
+        <footer>
+          <button type="button">Agregar al carrito</button>
+        </footer>
+      </article>
+
+    </section>
+
+    <!-- Laboratorio HTML5 -->
+    <section>
+      <h2>Laboratorio HTML5</h2>
+
+      <p><ruby>HTML<rp>(</rp><rt>HyperText Markup Language</rt><rp>)</rp></ruby></p>
+
+      <p><bdi>مرحبا</bdi></p>
+      <p><bdo dir="rtl">TechStore Online</bdo></p>
+
+      <p>https://www.techstore<wbr>.online<wbr>/productos</p>
+
+      <ul>
+        <li><data value="SKU-1001">Laptop Gamer Pro</data></li>
+        <li><data value="SKU-1002">Smartphone Ultra X</data></li>
+        <li><data value="SKU-1003">Auriculares SoundPro X1</data></li>
+      </ul>
+
+      <p><var>precio</var> — <code>calcularTotal(carrito)</code></p>
+      <p>Presiona <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+      <p><samp>Compra exitosa. Orden #ORD-0042</samp></p>
+      <pre><code>const total = carrito.reduce((sum, p) => sum + p.precio, 0);</code></pre>
+
+      <p>H<sub>2</sub>O — E = mc<sup>2</sup></p>
+      <p><del>$99.990</del> <ins>$79.990</ins></p>
+
+      <p><q>La mejor tienda tecnológica del país.</q></p>
+      <blockquote cite="https://techblog.example.com">
+        <p>TechStore Online ha revolucionado la forma en que compramos tecnología.</p>
+        <footer>— <cite>TechBlog, Revista Digital 2024</cite></footer>
+      </blockquote>
+
+      <p><abbr title="HyperText Markup Language">HTML</abbr></p>
+      <p><dfn>Ecommerce</dfn>: comercio realizado a través de medios electrónicos.</p>
+      <p>Actualización: <time datetime="2024-12-01">1 de diciembre de 2024</time></p>
+
+      <button type="button">Abrir demo de &lt;dialog&gt;</button>
+      <dialog id="modal-demo">
+        <h3>¡Oferta especial!</h3>
+        <p>Usa el código <strong>TECH10</strong> para un <mark>10% de descuento</mark>.</p>
+        <form method="dialog">
+          <button type="submit">Cerrar</button>
+        </form>
+      </dialog>
+
+      <canvas id="canvas-demo" width="300" height="100" aria-label="Gráfico de barras de ventas">
+        Tu navegador no soporta canvas.
+      </canvas>
+
+      <svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg" aria-label="Logotipo TechStore SVG">
+        <rect width="120" height="60" rx="8"/>
+        <text x="10" y="25">Tech</text>
+        <text x="10" y="45">Store</text>
+      </svg>
+
+      <template id="plantilla-producto">
+        <article class="producto">
+          <img src="" alt="">
+          <h3></h3>
+          <p class="precio"></p>
+          <button type="button">Agregar al carrito</button>
+        </article>
+      </template>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <section>
+      <h3>TechStore</h3>
+      <p>Tu tienda online de tecnología favorita.</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Twitter</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Información</h3>
+      <ul>
+        <li><a href="acerca.html">Sobre nosotros</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Ayuda</h3>
+      <ul>
+        <li><a href="contacto.html">Centro de ayuda</a></li>
+        <li><a href="#">Métodos de pago</a></li>
+        <li><a href="#">Envíos y entregas</a></li>
+        <li><a href="#">Devoluciones</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Mi cuenta</h3>
+      <ul>
+        <li><a href="#">Iniciar sesión</a></li>
+        <li><a href="#">Mis pedidos</a></li>
+        <li><a href="#">Lista de deseos</a></li>
+        <li><a href="#">Mi perfil</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Newsletter</h3>
+      <form action="#" method="post">
+        <label for="email-newsletter">Tu correo electrónico</label>
+        <input type="email" id="email-newsletter" name="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </section>
+    <address>
+      TechStore Online S.A. — Av. Tecnología 1234, Santiago, Chile —
+      <a href="mailto:contacto@techstore.cl">contacto@techstore.cl</a>
+    </address>
+    <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
+  </footer>
+
+</body>
+</html>
