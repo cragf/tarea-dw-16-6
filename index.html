@@ -6,8 +6,12 @@
   <meta name="description" content="TechStore Online - Tu tienda de tecnología favorita.">
   <meta name="keywords" content="tecnología, laptops, smartphones, accesorios">
   <meta name="author" content="TechStore Online">
+  <meta name="robots" content="index, follow">
   <title>TechStore Online - Tu Tienda de Tecnología</title>
-  <link rel="stylesheet" href="style/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+
 </head>
 <body>
 
@@ -91,9 +95,10 @@
     <section>
       <h2>Productos destacados</h2>
 
+      <div id="grilla-productos">
       <article>
         <header>
-          <img src="img/producto-galaxy-a54.jpg" alt="Samsung Galaxy A54 5G en color negro">
+          <img src="img/celular_samsung_negro.png" alt="Samsung Galaxy A54 5G en color negro">
         </header>
         <h3>Smartphone Galaxy A54 5G</h3>
         <p>Pantalla AMOLED 6.4&quot;, 128GB, cámara triple 50MP.</p>
@@ -106,7 +111,7 @@
 
       <article>
         <header>
-          <img src="img/producto-lenovo-ideapad.jpg" alt="Laptop Lenovo IdeaPad 3 plateada">
+          <img src="img/laptop_lenovo.png" alt="Laptop Lenovo IdeaPad 3 plateada">
         </header>
         <h3>Laptop Lenovo IdeaPad 3</h3>
         <p>Intel Core i5, 8GB RAM, SSD 512GB, 15.6&quot;.</p>
@@ -119,7 +124,7 @@
 
       <article>
         <header>
-          <img src="img/producto-sony-wh720n.jpg" alt="Auriculares Sony WH-CH720N blancos">
+          <img src="img/auricular_sony_blanco.png" alt="Auriculares Sony WH-CH720N blancos">
         </header>
         <h3>Auriculares Sony WH-CH720N</h3>
         <p>Cancelación de ruido activa, Bluetooth 5.2, 35h de batería.</p>
@@ -132,7 +137,7 @@
 
       <article>
         <header>
-          <img src="img/producto-xiaomi-watch2.jpg" alt="Smartwatch Xiaomi Watch 2 con correa negra">
+          <img src="img/smartwatch_negro.png" alt="Smartwatch Xiaomi Watch 2 con correa negra">
         </header>
         <h3>Smartwatch Xiaomi Watch 2</h3>
         <p>GPS integrado, monitor cardíaco, 150+ modos deportivos.</p>
@@ -145,7 +150,7 @@
 
       <article>
         <header>
-          <img src="img/producto-control-xbox.png" alt="Control inalámbrico Xbox Series X negro">
+          <img src="img/contro_xbox_negro.png" alt="Control inalámbrico Xbox Series X negro">
         </header>
         <h3>Control Xbox Series X|S</h3>
         <p>Inalámbrico, compatible con PC y Xbox.</p>
@@ -171,7 +176,7 @@
 
       <article>
         <header>
-          <img src="img/producto-ipad-10.jpg" alt="Apple iPad 10ma generación color azul">
+          <img src="img/ipad_10_azul.png" alt="Apple iPad 10ma generación color azul">
         </header>
         <h3>iPad 10ma Generación</h3>
         <p>Chip A14 Bionic, pantalla 10.9&quot;, Wi-Fi + 5G, 64GB.</p>
@@ -184,7 +189,7 @@
 
       <article>
         <header>
-          <img src="img/producto-logitech-g413.jpg" alt="Teclado mecánico Logitech G413 con retroiluminación roja">
+          <img src="img/teclado_mecanico.png" alt="Teclado mecánico Logitech G413 con retroiluminación roja">
         </header>
         <h3>Teclado Mecánico Logitech G413</h3>
         <p>Switches Romer-G, retroiluminación LED, aluminio.</p>
@@ -195,6 +200,7 @@
         </footer>
       </article>
 
+      </div>
     </section>
 
     <!-- Laboratorio HTML5 -->
@@ -232,7 +238,7 @@
       <p><dfn>Ecommerce</dfn>: comercio realizado a través de medios electrónicos.</p>
       <p>Actualización: <time datetime="2024-12-01">1 de diciembre de 2024</time></p>
 
-      <button type="button">Abrir demo de &lt;dialog&gt;</button>
+      <button type="button" id="btn-abrir-modal">Abrir demo de &lt;dialog&gt;</button>
       <dialog id="modal-demo">
         <h3>¡Oferta especial!</h3>
         <p>Usa el código <strong>TECH10</strong> para un <mark>10% de descuento</mark>.</p>
@@ -317,5 +323,7 @@
     <small>© 2024 TechStore Online. Todos los derechos reservados.</small>
   </footer>
 
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/productos.js"></script>
 </body>
 </html>

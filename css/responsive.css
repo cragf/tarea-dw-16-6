@@ -13,7 +13,7 @@
   h2 { font-size: 1.2rem; }
 
   /* Grid a 1 columna */
-  main > section:nth-child(3) {
+  #grilla-productos {
     grid-template-columns: 1fr;
   }
 
@@ -60,7 +60,7 @@
   }
 
   /* Grid a 2 columnas */
-  main > section:nth-child(3) {
+  #grilla-productos {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -70,7 +70,7 @@
 @media (min-width: 1025px) {
 
   /* Grid a 4 columnas */
-  main > section:nth-child(3) {
+  #grilla-productos {
     grid-template-columns: repeat(4, 1fr);
   }
 

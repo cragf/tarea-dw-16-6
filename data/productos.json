@@ -1,0 +1,18 @@
+[
+  { "id": 1, "nombre": "Smartphone Galaxy A54 5G", "precio": 499990, "categoria": "smartphones", "marca": "Samsung", "stock": 14 },
+  { "id": 2, "nombre": "Laptop Lenovo IdeaPad 3", "precio": 699990, "categoria": "laptops", "marca": "Lenovo", "stock": 8 },
+  { "id": 3, "nombre": "Auriculares Sony WH-CH720N", "precio": 199990, "categoria": "accesorios", "marca": "Sony", "stock": 20 },
+  { "id": 4, "nombre": "Smartwatch Xiaomi Watch 2", "precio": 159990, "categoria": "accesorios", "marca": "Xiaomi", "stock": 12 },
+  { "id": 5, "nombre": "Control Xbox Series X|S", "precio": 74990, "categoria": "gaming", "marca": "Microsoft", "stock": 25 },
+  { "id": 6, "nombre": "Echo Dot (5ta Gen)", "precio": 49990, "categoria": "accesorios", "marca": "Amazon", "stock": 30 },
+  { "id": 7, "nombre": "iPad 10ma Generación", "precio": 449990, "categoria": "tablets", "marca": "Apple", "stock": 10 },
+  { "id": 8, "nombre": "Teclado Mecánico Logitech G413", "precio": 89990, "categoria": "gaming", "marca": "Logitech", "stock": 5 },
+  { "id": 9, "nombre": "Mouse Razer DeathAdder V3", "precio": 119990, "categoria": "gaming", "marca": "Razer", "stock": 18 },
+  { "id": 10, "nombre": "Monitor LG 27\" 4K UHD", "precio": 379990, "categoria": "monitores", "marca": "LG", "stock": 7 },
+  { "id": 11, "nombre": "Cámara Web Logitech C920", "precio": 71990, "categoria": "accesorios", "marca": "Logitech", "stock": 15 },
+  { "id": 12, "nombre": "SSD Samsung 870 EVO 1TB", "precio": 69990, "categoria": "almacenamiento", "marca": "Samsung", "stock": 22 },
+  { "id": 13, "nombre": "Impresora HP DeskJet 2775", "precio": 89990, "categoria": "impresoras", "marca": "HP", "stock": 9 },
+  { "id": 14, "nombre": "Bocina JBL Flip 6", "precio": 84990, "categoria": "audio", "marca": "JBL", "stock": 16 },
+  { "id": 15, "nombre": "Hub USB-C Anker 7 en 1", "precio": 39990, "categoria": "accesorios", "marca": "Anker", "stock": 28 },
+  { "id": 16, "nombre": "Laptop ASUS ROG Strix G15", "precio": 1299990, "categoria": "laptops", "marca": "Asus", "stock": 4 }
+]
